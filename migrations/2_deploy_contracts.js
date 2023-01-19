@@ -16,7 +16,7 @@ module.exports = async function (deployer, network, accounts) {
     // This is the first ganache address, when started with "ganache-cli -d"
     // you can add your metamask address here.
     await paymaster.whitelistSender('0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1')
-
+    // await paymaster.whitelistSender('<your address>')
 
     // you can also add addresses by running `truffle console` and then running:
     // const pm = await WhitelistPaymaster.deployed()

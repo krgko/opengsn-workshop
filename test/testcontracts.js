@@ -15,7 +15,7 @@ contract("CaptureTheFlag", async accounts => {
     before(async () => {
         const {forwarderAddress, relayHubAddress} = GsnTestEnvironment.loadDeployment()
 
-        const whitelistPaymaster = await WhitelistPaymaster.new()
+        whitelistPaymaster = await WhitelistPaymaster.new()
         await whitelistPaymaster.setTrustedForwarder(forwarderAddress)
         await whitelistPaymaster.setRelayHub(relayHubAddress)
         await web3.eth.sendTransaction({from: accounts[0], to: whitelistPaymaster.address, value: 1e18})
